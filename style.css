@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-text: #fff;
+    --bg-color: #cfdaec;
+    --bg-wapr-color: #eef0f6;
+    --item-color: #759cd8;
+    --first-color: #9cb9d1;
+    --second-color: #094d74;
+}
+
+.dark {
+    --color-text: rgb(219, 219, 219);
+    --bg-color: #313131;
+    --bg-wapr-color: #2b2b2bb4;
+    --item-color: #131313;
+    --first-color: #0e0e0e80;
+    --second-color: #808080;
+    --mode-icon: \1F311;
+}
+
+body{
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 768px;
+    width: 100%;
+    background: var(--bg-wapr-color);
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.wrapper header {
+    font-size: 30px;
+    font-weight: 600px;
+    color: var(--second-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .mode::before{
+    cursor: pointer;
+    content: "\263E";
+    display: block;
+    transform: rotate(0.9turn);
+}
+
+.wrapper .inputField {
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.inputField input {
+    outline: none;
+    width: 85%;
+    height: 100%;
+    border: 1px solid var(--first-color);
+    font-size: 17px;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+.inputField button {
+    width: 60px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: var(--item-color);
+    color: var(--color-text);
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.inputField button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .todoList {
+    height: 50%;
+    overflow-y: auto;
+}
+
+.todoList {
+    padding-inline-start: 0px;
+}
+
+.todoList_item {
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    font-size: 22px;
+    position: relative;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    background: var(--item-color);
+    color: var(--color-text);
+    cursor: default;
+    overflow: hidden;
+}
+
+.todoList li span {
+    position: absolute;
+    right: 0px;
+    color: var(--color-text);
+    background: var(--second-color);
+    width: 45px;
+    text-align: center;
+    border-radius: 0px 3px 3px 0px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    color:var(--second-color);
+    align-items: center;
+}
+
+.footer button {
+    border: none;
+    outline: none;
+    background: var(--second-color);
+    color:var(--color-text);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+    padding: 10px 20px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.footer button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
